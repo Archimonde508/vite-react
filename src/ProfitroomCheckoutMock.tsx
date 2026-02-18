@@ -11,8 +11,8 @@ export default function ProfitroomCheckoutMock() {
     if (paymentMethod === "blik") {
       return (
         <div className="pr-mock-form-group">
-          <label>Kod BLIK</label>
-          <input type="text" className="pr-mock-input" placeholder="Wpisz 6-cyfrowy kod BLIK" maxLength={6} />
+          <label>BLIK-Code</label>
+          <input type="text" className="pr-mock-input" placeholder="Geben Sie den 6-stelligen BLIK-Code ein" maxLength={6} />
         </div>
       );
     }
@@ -26,14 +26,14 @@ export default function ProfitroomCheckoutMock() {
   const VisaModal = () => (
     <div className="pr-mock-modal-overlay">
       <div className="pr-mock-modal">
-        <h3>Podaj dane karty płatniczej</h3>
+        <h3>Geben Sie Ihre Kartendaten ein</h3>
         <div className="pr-mock-form-group">
-          <label>Numer karty</label>
+          <label>Kartennummer</label>
           <input type="text" className="pr-mock-input" placeholder="1234 5678 9012 3456" maxLength={19} />
         </div>
         <div className="pr-mock-form-group" style={{ display: 'flex', gap: 8 }}>
           <div style={{ flex: 1 }}>
-            <label>MM/YY</label>
+            <label>MM/JJ</label>
             <input type="text" className="pr-mock-input" placeholder="MM/YY" maxLength={5} />
           </div>
           <div style={{ flex: 1 }}>
@@ -42,11 +42,11 @@ export default function ProfitroomCheckoutMock() {
           </div>
         </div>
         <div className="pr-mock-form-group">
-          <label>Imię i nazwisko na karcie</label>
-          <input type="text" className="pr-mock-input" placeholder="Imię i nazwisko" />
+          <label>Name auf der Karte</label>
+          <input type="text" className="pr-mock-input" placeholder="Name auf der Karte" />
         </div>
-        <button className="pr-mock-confirm-btn" onClick={() => { setShowVisaModal(false); setShowSuccess(true); }}>Zapłać</button>
-        <button className="pr-mock-cancel-btn" onClick={() => setShowVisaModal(false)}>Anuluj</button>
+        <button className="pr-mock-confirm-btn" onClick={() => { setShowVisaModal(false); setShowSuccess(true); }}>Bezahlen</button>
+        <button className="pr-mock-cancel-btn" onClick={() => setShowVisaModal(false)}>Abbrechen</button>
       </div>
     </div>
   );
@@ -55,9 +55,9 @@ export default function ProfitroomCheckoutMock() {
   const SuccessModal = () => (
     <div className="pr-mock-modal-overlay">
       <div className="pr-mock-modal">
-        <h2 style={{ color: '#1bbf6e' }}>Rezerwacja zakończona sukcesem!</h2>
-        <p>Dziękujemy za dokonanie rezerwacji.<br />Potwierdzenie zostało wysłane na Twój adres email.</p>
-        <button className="pr-mock-confirm-btn" onClick={() => setShowSuccess(false)}>Zamknij</button>
+        <h2 style={{ color: '#1bbf6e' }}>Reservierung erfolgreich abgeschlossen!</h2>
+        <p>Vielen Dank für Ihre Reservierung.<br />Die Bestätigung wurde an Ihre E-Mail-Adresse gesendet.</p>
+        <button className="pr-mock-confirm-btn" onClick={() => setShowSuccess(false)}>Schließen</button>
       </div>
     </div>
   );
@@ -68,24 +68,24 @@ export default function ProfitroomCheckoutMock() {
       <aside className="pr-mock-sidebar">
         <div className="pr-mock-panel pr-mock-booking-summary">
           <div className="pr-mock-panel-heading">
-            <h2>Podsumowanie rezerwacji <i className="icon-arrow-down3" /></h2>
+            <h2>Buchungsübersicht <i className="icon-arrow-down3" /></h2>
           </div>
           <div className="pr-mock-booking-summary-content">
             <div className="pr-mock-booking-summary-top">
               <div className="pr-mock-booking-summary-date-group">
                 <div className="pr-mock-booking-summary-date-inner">
-                  <strong className="pr-mock-booking-summary-day-name">śr.</strong>
+                  <strong className="pr-mock-booking-summary-day-name">Mi.</strong>
                   <strong className="pr-mock-booking-summary-day-digit">18</strong>
                   <span className="pr-mock-stay-date-group">
-                    <span>lut</span> <span>2026</span>
+                    <span>Feb</span> <span>2026</span>
                   </span>
                 </div>
                 <i className="icon-thin-right-arrow" />
                 <div className="pr-mock-booking-summary-date-inner">
-                  <strong className="pr-mock-booking-summary-day-name">czw.</strong>
+                  <strong className="pr-mock-booking-summary-day-name">Do.</strong>
                   <strong className="pr-mock-booking-summary-day-digit">19</strong>
                   <span className="pr-mock-stay-date-group">
-                    <span>lut</span> <span>2026</span>
+                    <span>Feb</span> <span>2026</span>
                   </span>
                 </div>
               </div>
@@ -93,55 +93,55 @@ export default function ProfitroomCheckoutMock() {
             <div className="pr-mock-booking-summary-body">
               <div className="pr-mock-booking-summary-offer">
                 <div className="pr-mock-booking-summary-content-title">
-                  Wypoczynek nad morzem - pobyt ze śniadaniem
+                  Erholung am Meer – Aufenthalt mit Frühstück
                 </div>
               </div>
               <div className="pr-mock-booking-summary-room">
                 <div className="pr-mock-booking-summary-content-title">
-                  Pokój dwuosobowy
+                  Doppelzimmer
                 </div>
                 <div><span>Kościuszki 18</span></div>
                 <label className="pr-mock-booking-summary-label-occupancy">
-                  Osoby: 2
+                  Personen: 2
                 </label>
               </div>
             </div>
             <div className="pr-mock-booking-summary-totals">
               <div className="pr-mock-booking-totals-row">
-                <div>Pokoje i oferta</div>
+                <div>Zimmer und Angebot</div>
                 <div>
                   <span className="pr-mock-text-muted" style={{textDecoration: 'line-through', marginRight: 5}}>339&nbsp;zł</span>
                   <span className="pr-mock-booking-totals-price">286&nbsp;zł</span>
                 </div>
               </div>
               <div className="pr-mock-booking-totals-row">
-                <div className="pr-mock-text-muted">Najniższa cena z 30 dni przed obniżką</div>
+                <div className="pr-mock-text-muted">Niedrigster Preis der letzten 30 Tage vor der Reduzierung</div>
                 <div className="pr-mock-text-muted">339&nbsp;zł</div>
               </div>
               <div className="pr-mock-booking-totals-row">
-                <div>Opłaty i podatki płatne w ramach rezerwacji</div>
+                <div>Gebühren und Steuern, die im Rahmen der Reservierung zu zahlen sind</div>
                 <div><span className="pr-mock-booking-totals-price">6,80&nbsp;zł</span></div>
               </div>
               <div className="pr-mock-booking-totals-row pr-mock-booking-totals-row-big">
-                <div>SUMA</div>
+                <div>GESAMT</div>
                 <div><span className="pr-mock-booking-totals-price">292,80&nbsp;zł</span></div>
               </div>
             </div>
             <div className="pr-mock-booking-totals-footer">
               <div className="pr-mock-booking-totals-row">
-                <div>Przedpłata</div>
+                <div>Vorauszahlung</div>
                 <div><span className="pr-mock-booking-totals-footer-price">85,80&nbsp;zł</span></div>
               </div>
               <div className="pr-mock-booking-totals-row">
-                <div>Na miejscu</div>
+                <div>Vor Ort</div>
                 <div><span className="pr-mock-booking-totals-footer-price">200,20&nbsp;zł</span></div>
               </div>
               <div className="pr-mock-booking-totals-row">
-                <div>Opłaty i podatki</div>
+                <div>Gebühren und Steuern</div>
                 <div><span className="pr-mock-booking-totals-footer-price">6,80&nbsp;zł</span></div>
               </div>
               <div className="pr-mock-booking-totals-row">
-                <button type="button" className="pr-mock-link pr-mock-link-primary">Szczegółowa kalkulacja</button>
+                <button type="button" className="pr-mock-link pr-mock-link-primary">Detaillierte Kalkulation</button>
               </div>
             </div>
           </div>
@@ -153,69 +153,69 @@ export default function ProfitroomCheckoutMock() {
       }}>
         <div className="pr-mock-panel pr-mock-booking-forms">
           <div className="pr-mock-panel-heading">
-            <h3 className="pr-mock-booking-steps-title">Podaj dane rezerwującego</h3>
+            <h3 className="pr-mock-booking-steps-title">Geben Sie die Daten des Buchenden ein</h3>
           </div>
           <div className="pr-mock-booking-guest-form">
             <div className="pr-mock-form-group">
-              <label>Imię i nazwisko*</label>
-              <input type="text" className="pr-mock-input" placeholder="Imię i nazwisko*" />
+              <label>Name und Nachname*</label>
+              <input type="text" className="pr-mock-input" placeholder="Name und Nachname*" />
             </div>
             <div className="pr-mock-form-group">
-              <label>Adres email*</label>
-              <input type="email" className="pr-mock-input" placeholder="Adres email*" />
+              <label>E-Mail-Adresse*</label>
+              <input type="email" className="pr-mock-input" placeholder="E-Mail-Adresse*" />
             </div>
             <div className="pr-mock-form-group">
-              <label>Numer telefonu*</label>
-              <input type="tel" className="pr-mock-input" placeholder="Numer telefonu*" />
+              <label>Telefonnummer*</label>
+              <input type="tel" className="pr-mock-input" placeholder="Telefonnummer*" />
             </div>
             <div className="pr-mock-form-group">
-              <label>Chcę otrzymać fakturę VAT <input type="checkbox" /></label>
+              <label>Ich möchte eine Mehrwertsteuerrechnung erhalten <input type="checkbox" /></label>
             </div>
             {/* Invoice fields mock */}
             <div className="pr-mock-invoice-fields">
               <div className="pr-mock-form-group">
-                <label>Nazwa firmy / Imię i nazwisko*</label>
-                <input type="text" className="pr-mock-input" placeholder="Nazwa firmy / Imię i nazwisko*" />
+                <label>Firmenname / Name und Nachname*</label>
+                <input type="text" className="pr-mock-input" placeholder="Firmenname / Name und Nachname*" />
               </div>
               <div className="pr-mock-form-group">
-                <label>NIP</label>
-                <input type="text" className="pr-mock-input" placeholder="NIP" />
+                <label>USt-IdNr.</label>
+                <input type="text" className="pr-mock-input" placeholder="USt-IdNr." />
               </div>
               <div className="pr-mock-form-group">
-                <label>Ulica*</label>
-                <input type="text" className="pr-mock-input" placeholder="Ulica*" />
+                <label>Straße*</label>
+                <input type="text" className="pr-mock-input" placeholder="Straße*" />
               </div>
               <div className="pr-mock-form-group">
-                <label>Kod pocztowy*</label>
-                <input type="text" className="pr-mock-input" placeholder="Kod pocztowy*" />
+                <label>Postleitzahl*</label>
+                <input type="text" className="pr-mock-input" placeholder="Postleitzahl*" />
               </div>
               <div className="pr-mock-form-group">
-                <label>Miasto*</label>
-                <input type="text" className="pr-mock-input" placeholder="Miasto*" />
+                <label>Stadt*</label>
+                <input type="text" className="pr-mock-input" placeholder="Stadt*" />
               </div>
               <div className="pr-mock-form-group">
-                <label>Kraj</label>
+                <label>Land</label>
                 <select className="pr-mock-input">
-                  <option>Polska</option>
-                  <option>Germany</option>
+                  <option>Polen</option>
+                  <option>Deutschland</option>
                   <option>UK</option>
                 </select>
               </div>
             </div>
             <div className="pr-mock-form-group">
-              <label>Mam uwagi do rezerwacji <input type="checkbox" /></label>
-              <textarea className="pr-mock-input" placeholder="Uwagi do rezerwacji (np. godzina przyjazdu, numer lotu lub dodatkowe życzenia)" />
+              <label>Ich habe Anmerkungen zur Reservierung <input type="checkbox" /></label>
+              <textarea className="pr-mock-input" placeholder="Anmerkungen zur Reservierung (z.B. Ankunftszeit, Flugnummer oder besondere Wünsche)" />
             </div>
             <div className="pr-mock-form-group">
-              <label>Dane gościa inne niż rezerwującego <input type="checkbox" /></label>
-              <input type="text" className="pr-mock-input" placeholder="Imię i nazwisko gościa w pokoju" />
+              <label>Gastdaten unterscheiden sich vom Buchenden <input type="checkbox" /></label>
+              <input type="text" className="pr-mock-input" placeholder="Name des Gastes im Zimmer" />
             </div>
           </div>
         </div>
         {/* Payment methods mock */}
         <div className="pr-mock-panel pr-mock-payment-methods">
           <div className="pr-mock-panel-heading">
-            <h3 className="pr-mock-booking-steps-title">Teraz płacisz tylko część!</h3>
+            <h3 className="pr-mock-booking-steps-title">Jetzt zahlen Sie nur einen Teil!</h3>
             <div className="pr-mock-secure-payment-icon">
               <img src="https://checkout.profitroom.com/img/secure_payment.png" alt="Secure payment" style={{height: 32}} />
             </div>
@@ -223,7 +223,7 @@ export default function ProfitroomCheckoutMock() {
           <div className="pr-mock-payment-methods-list">
             <label className="pr-mock-radio">
               <input type="radio" name="payment-method" value="gpay" checked={paymentMethod === "gpay"} onChange={() => setPaymentMethod("gpay")}/>
-              <span className="pr-mock-radio-title">Szybka płatność online</span>
+              <span className="pr-mock-radio-title">Schnelle Online-Zahlung</span>
               <img src="https://checkout.profitroom.com/img/provider_logos/gpay.svg" alt="Google Pay" style={{height: 32, marginLeft: 8}} />
               <span className="pr-mock-payment-price">85,80&nbsp;zł</span>
             </label>
@@ -235,14 +235,14 @@ export default function ProfitroomCheckoutMock() {
             </label>
             <label className="pr-mock-radio">
               <input type="radio" name="payment-method" value="visa" checked={paymentMethod === "visa"} onChange={() => setPaymentMethod("visa")}/>
-              <span className="pr-mock-radio-title">Karta Płatnicza</span>
+              <span className="pr-mock-radio-title">Zahlungskarte</span>
               <img src="https://checkout.profitroom.com/img/provider_logos/visa_new.svg" alt="Visa" style={{height: 32, marginLeft: 8}} />
               <img src="https://checkout.profitroom.com/img/provider_logos/mastercard_new.svg" alt="MasterCard" style={{height: 32, marginLeft: 8}} />
               <span className="pr-mock-payment-price">85,80&nbsp;zł</span>
             </label>
             <label className="pr-mock-radio">
               <input type="radio" name="payment-method" value="przelewy24" />
-              <span className="pr-mock-radio-title">Przelew online</span>
+              <span className="pr-mock-radio-title">Online-Überweisung</span>
               <img src="https://checkout.profitroom.com/img/provider_logos/przelewy24.svg" alt="Przelewy24" style={{height: 32, marginLeft: 8}} />
               <span className="pr-mock-payment-price">85,80&nbsp;zł</span>
             </label>
@@ -259,15 +259,15 @@ export default function ProfitroomCheckoutMock() {
         <div className="pr-mock-panel pr-mock-confirm-section">
           <div className="pr-mock-form-group">
             <label>
-              <input type="checkbox" /> Akceptuję regulamin rezerwacji, warunki anulacji oraz warunki i obowiązek informacyjny Przelewy24. <span style={{color: '#d00'}}>*</span>
+              <input type="checkbox" /> Ich akzeptiere die Buchungsbedingungen, Stornierungsbedingungen sowie die Bedingungen und Informationspflichten von Przelewy24. <span style={{color: '#d00'}}>*</span>
             </label>
           </div>
           <div className="pr-mock-form-group">
             <label>
-              <input type="checkbox" /> Wyrażam zgodę na otrzymywanie informacji o aktualnych wydarzeniach i promocjach.
+              <input type="checkbox" /> Ich bin damit einverstanden, Informationen über aktuelle Veranstaltungen und Aktionen zu erhalten.
             </label>
           </div>
-          <button type="submit" className="pr-mock-confirm-btn">Rezerwuj <span style={{fontSize: '0.95em', color: '#888'}}>z obowiązkiem zapłaty</span></button>
+          <button type="submit" className="pr-mock-confirm-btn">Reservieren <span style={{fontSize: '0.95em', color: '#888'}}>mit Zahlungsverpflichtung</span></button>
         </div>
       </form>
       {showVisaModal && <VisaModal />}
