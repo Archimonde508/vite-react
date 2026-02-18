@@ -20,7 +20,6 @@
 .pr-mock-panel {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
   padding: 0 0 18px 0;
   margin-bottom: 24px;
 }
@@ -152,7 +151,7 @@
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-  padding: 32px 24px;
+  padding: 40px 32px !important;
 }
 .pr-mock-booking-guest-form {
   margin-top: 18px;
@@ -161,6 +160,11 @@
   margin-bottom: 18px;
   display: flex;
   flex-direction: column;
+}
+.pr-mock-form-group label {
+  padding-bottom: 6px;
+  font-weight: 500;
+  color: #1a5e8b;
 }
 .pr-mock-input {
   padding: 10px 12px;
@@ -252,4 +256,8 @@
 }
 .pr-mock-cancel-btn:hover {
   background: #ddd;
+}
+
+body, .pr-mock-row, .pr-mock-sidebar, .pr-mock-main-content, .pr-mock-booking-form {
+  font-family: Arial, 'Segoe UI', sans-serif !important;
 }
