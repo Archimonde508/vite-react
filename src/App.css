@@ -207,3 +207,116 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Modal overlay and modal animation */
+.stripo-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.stripo-modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  animation: modalIn 0.25s cubic-bezier(.4,0,.2,1);
+}
+.stripo-modal-animate {
+  animation: modalIn 0.25s cubic-bezier(.4,0,.2,1);
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.stripo-modal-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.stripo-confirm-btn {
+  background: #1bbf6e;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.stripo-confirm-btn:hover {
+  background: #159e59;
+}
+.stripo-cancel-btn {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.stripo-cancel-btn:hover {
+  background: #ddd;
+}
+
+/* Success page styling */
+.success-page-outer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0ffe7 0%, #f7fafd 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.success-page-modal {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  min-width: 340px;
+  max-width: 95vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success-icon {
+  font-size: 3.5rem;
+  color: #1bbf6e;
+  margin-bottom: 1.2rem;
+}
+.success-title {
+  font-size: 2rem;
+  color: #1bbf6e;
+  margin-bottom: 0.7rem;
+}
+.success-message {
+  font-size: 1.15rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+.stripo-home-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #1bbf6e;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #1bbf6e33;
+  transition: color 0.18s;
+}
+.stripo-home-link:hover {
+  color: #159e59;
+  border-bottom: 1px solid #159e59;
+}
