@@ -1,0 +1,255 @@
+/* Profitroom checkout mock styles */
+.pr-mock-row {
+  display: flex;
+  flex-wrap: wrap;
+  background: #f7fafd;
+  min-height: 100vh;
+}
+.pr-mock-sidebar {
+  flex: 0 0 370px;
+  max-width: 370px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  margin: 32px 24px 32px 32px;
+  padding: 0;
+  position: sticky;
+  top: 74px;
+  height: fit-content;
+}
+.pr-mock-panel {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 0 0 18px 0;
+  margin-bottom: 24px;
+}
+.pr-mock-panel-heading {
+  padding: 18px 24px 10px 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.pr-mock-panel-heading h2 {
+  font-size: 1.25rem;
+  color: #1a5e8b;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pr-mock-panel-heading h3 {
+  font-size: 1.15rem;
+  color: #1a5e8b;
+  margin: 0;
+}
+.pr-mock-booking-summary-content {
+  padding: 18px 24px 0 24px;
+}
+.pr-mock-booking-summary-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+.pr-mock-booking-summary-date-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.pr-mock-booking-summary-date-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f0f6ff;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 60px;
+}
+.pr-mock-booking-summary-day-name {
+  color: #1a5e8b;
+  font-size: 1.1em;
+}
+.pr-mock-booking-summary-day-digit {
+  font-size: 1.5em;
+  color: #1a5e8b;
+}
+.pr-mock-stay-date-group {
+  color: #888;
+  font-size: 0.95em;
+}
+.icon-thin-right-arrow {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: url('https://cdn-icons-png.flaticon.com/512/271/271228.png') center/contain no-repeat;
+  margin: 0 8px;
+}
+.pr-mock-booking-summary-body {
+  margin-bottom: 18px;
+}
+.pr-mock-booking-summary-content-title {
+  font-weight: 600;
+  color: #1a5e8b;
+  margin-bottom: 4px;
+}
+.pr-mock-booking-summary-label-occupancy {
+  color: #555;
+  font-size: 0.98em;
+}
+.pr-mock-booking-summary-totals {
+  margin-bottom: 12px;
+}
+.pr-mock-booking-totals-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.08em;
+  margin-bottom: 6px;
+}
+.pr-mock-booking-totals-row-big {
+  font-size: 1.18em;
+  font-weight: bold;
+  color: #1a5e8b;
+}
+.pr-mock-booking-totals-price {
+  color: #1a5e8b;
+  font-weight: 600;
+}
+.pr-mock-booking-totals-footer {
+  border-top: 1px solid #e5e5e5;
+  padding-top: 10px;
+}
+.pr-mock-booking-totals-footer-price {
+  color: #1a5e8b;
+  font-weight: 500;
+}
+.pr-mock-link {
+  background: none;
+  border: none;
+  color: #1a5e8b;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0;
+}
+.pr-mock-link-primary {
+  font-weight: 600;
+}
+.pr-mock-text-muted {
+  color: #888;
+  font-size: 0.95em;
+}
+.pr-mock-main-content {
+  flex: 1 1 0;
+  min-width: 320px;
+  margin: 32px 32px 32px 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  min-height: 600px;
+}
+.pr-mock-booking-form {
+  margin: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+.pr-mock-booking-guest-form {
+  margin-top: 18px;
+}
+.pr-mock-form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+.pr-mock-input {
+  padding: 10px 12px;
+  border: 1.5px solid #b3cbe6;
+  border-radius: 6px;
+  font-size: 1em;
+  background: #fafdff;
+  color: #18304b;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-top: 6px;
+}
+.pr-mock-input:focus {
+  border-color: #1a5e8b;
+}
+.pr-mock-radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 1.08em;
+  background: #f0f6ff;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.pr-mock-radio-title {
+  font-weight: 500;
+  color: #1a5e8b;
+}
+.pr-mock-payment-price {
+  font-weight: 600;
+  color: #1a5e8b;
+  margin-left: auto;
+}
+.pr-mock-confirm-btn {
+  width: 100%;
+  padding: 14px;
+  background: #1a5e8b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 500;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+.pr-mock-confirm-btn:hover {
+  background: #159e59;
+}
+
+/* Visa and success modals */
+.pr-mock-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+.pr-mock-modal {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  animation: modalIn 0.25s cubic-bezier(.4,0,.2,1);
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(40px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.pr-mock-cancel-btn {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.18s;
+}
+.pr-mock-cancel-btn:hover {
+  background: #ddd;
+}
